@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.score-board span {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+#gameCanvas {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background: #111;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#startBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#startBtn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+#pauseBtn {
+    background: #ff9800;
+    color: white;
+}
+
+#pauseBtn:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.game-over h2 {
+    color: #ff6b6b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.game-over p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#restartBtn {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2em;
+}
+
+#restartBtn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+    #gameCanvas {
+        width: 350px;
+        height: 350px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .score-board {
+        font-size: 1em;
+    }
+}
